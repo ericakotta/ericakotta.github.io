@@ -42,6 +42,8 @@
             border: 1px;
             margin-right: 10px; /* Add margin between the two sub-containers */
             flex-direction: column;
+            max-height: 100%;
+            overflow: hidden;
         }
 
         .header-container-2 {
@@ -49,10 +51,17 @@
             display: flex;
             justify-content: center;
             justify-content: center;
-
             align-items: center;
             border: 1px;
             margin-right: 10px;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        .header-pokki-image-container img{
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
         }
 
 
@@ -87,7 +96,6 @@
             flex-direction: column;
             text-align: center;
         }
-        
 
 
         .text-container {
@@ -206,7 +214,7 @@
     </div>
 
     <div class="header-container-2" id="imageContainer">
-        <div class="image-container">
+        <div class="header-pokki-image-container">
             <img src="pictures/pokki_silhouette.png" alt="Your Image">
         </div>
     </div>
