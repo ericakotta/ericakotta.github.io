@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+			font-family: 'Cardo';
+			src: url('fonts/Cardo-Regular.ttf'), format('ttf');
+			font-weight: normal;
+		}
+		@font-face {
+			font-family: 'Cardo';
+			src: url('fonts/Cardo-Bold.ttf'), format('ttf');
+			font-weight: bold;
+		}
+        body {
+            margin: 0;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Cardo', mono;
+            background: linear-gradient(to bottom, #f3ffda, #daffee);
+			font-size: 3vw; /* Set font size percentage of view width */
+        }
+
+        .header-container {
+            display: flex;
+            max-height: 80vh;
+            justify-content: space-between; /* Space between the two containers */
+            border: 1px;
+            margin-bottom: 20px;
+            font-size: 4vw;
+            flex-direction: row;
+        }
+
+        .header-container-1 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px;
+            margin-right: 10px; /* Add margin between the two sub-containers */
+            flex-direction: column;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        .header-container-2 {
+            flex: 1.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px;
+            margin-right: 10px;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        .header-pokki-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .header-pokki-image-container img{
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+
+        .header-container-1-margin-top {
+            /* Spacer above "HELLO" img */
+            flex: 0.2;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-container-1-margin-bottom {
+            /* Spacer above "HELLO" img */
+            flex: 0.2;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-container-1-1 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+
+        .header-container-1-2 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+
+        .text-container {
+            text-align: center;
+        }
+
+        .image-container {
+            overflow: hidden;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .regular-container {
+            flex: 1;
+            border: 1px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+
+        hr.styled-line {
+            width: 50%; /* Set the width of the line */
+            border-bottom: 1px solid #6d7e79;
+            margin: 0 auto; /* Center the line horizontally and provide some space */
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }   
+
+		.icon-row {
+            display: flex; justify-content: space-around; margin: 20px;
+		}
+		
+		.icon-row img {
+            width: 6vw; /* Set the initial width of the images */
+            height: auto; /* Set the initial height of the images */
+            margin: 2px;
+			transition: transform 0.12s ease-in-out;
+        }
+
+        .icon-row img:hover {
+            transform: scale(1.6);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+        .container img{
+            max-width: 90vw;
+        }
+
+        /* Horizontal list of Tea Links */
+        .horizontal { display: inline; border-left: 2px; border-right: 2px; padding-left: 0.3em; padding-right: 0.3em}
+
+        /* Vertical list of Tea Descriptions */
+        .tea-descr-top {
+            display: flex;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+        .tea-descr-label {
+            flex: 1;
+        }
+        .tea-descr-label img {
+            max-width: 90%; height: auto; margin: 2vw auto; margin-inline: 2vw auto;
+        }
+        .tea-descr-buy {
+            flex: 1; margin-inline: 0vw auto; justify-content: center; align-items: center;
+
+        }
+        .tea-descr-bottom {
+            max-width: 1000px; overflow: hidden; justify-content: center; align-items: center;
+        }
+        .tea-descr-bottom img {
+            max-width: 70%; height: auto; margin: auto; display: block; margin-top: 3vw;
+        }
+        .tea-descr-more-about {
+            max-width: 100%; justify-content: center;
+        }
+        #moreText {display: none;}
+
+        .seeMoreLessButton { 
+        cursor: pointer; 
+        border: 0px solid #3498db; 
+        background-color: transparent; 
+        color: #3498db; 
+        font-size: 1em; 
+        } 
+    </style>
+
+	<title>😽 Erica's Website</title>
+    
+</head>
+<body>
+
+<div class="header-container">
+    <div class="header-container-1" id="textContainer">
+        <div class="header-container-1-margin-top" id="margContainer">
+        </div>   
+        <div class="header-container-1-1" id="helloContainer">
+            <img src="pictures/HELLO.png" style="max-width: 100%; height: auto;">
+        </div>      
+        
+        <div class="header-container-1-2" id="linksContainer">
+            <p>Welcome to my webpage &#128573;</p>
+            <p><a href="#Gallery"> - Gallery - </a></p>
+            <p><a href="https://www.mellowmonk.com"> - Tea - </a></p>
+        </div>
+
+        <div class="header-container-1-margin-bottom" id="margContainer">
+        </div>  
+    </div>
+
+    <div class="header-container-2" id="imageContainer">
+        <div class="header-pokki-image-container">
+            <img src="pictures/pokki_silhouette.png" alt="Your Image">
+        </div>
+    </div>
+</div>
+
+<hr class="styled-line">
+
+<div class="regular-container" id="Tea">
+    <h1> Tea Text Links 🍵 </h1>
+
+    <p>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#artisans_reserve">Artisan's Reserve</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#aso_black">Aso Black</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#blissful_buds">Blissful Buds</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#bbuds_bagged">Blissful Buds (Bagged)</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#frosty_garden">Frosty Garden</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#harmony_tea">Harmony Tea</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#kuma_green_1228">Kuma Green 1228</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#monks_choice">Monk's Choice</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#mountain_snow">Mountain Snow</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#shaded_leaf">Shaded Leaf</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#sleepy_cat">Sleepy Cat</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#summer_select">Summer Select</a></li>
+        <li class="horizontal"><a href="https://mellowmonk.com/buyGreenTea.htm#top_leaf">Top Leaf</a></li>
+    </p>
+
+</div>
+
+<hr class="styled-line">
+
+<!-- ARTISAN'S RESERVE -->
+<div class="tea-descr-top">
+    <div class="tea-descr-label">
+        <a href="https://mellowmonk.com/buyGreenTea.htm#artisans_reserve"> 
+            <img src="pictures/teas/label_ArtisansReserve.jpg" title="Artisan's Reserve" alt="Artisan's Reserve">
+        </a>
+    </div>
+    <div class="tea-descr-buy">
+        <p><em>A flavorful but accessible green &mdash; crisp, earthy, and smooth</em>.</p>
+        <p><strong>Artisan:</strong> <a href="ourGrowers.htm#nagata" target="_blank">Koji Nagata</a>, Aso City, Kumamoto, Japan</p>
+        <p><strong>Aroma:</strong> Earthy and bright</p>
+        <p><strong>Taste:</strong> Full-bodied, rich</p>
+        <p>$12.95 per 100-gram packet</p>
+
+        <p>
+            <form method="POST" ACTION="https://ww10.aitsafe.com/cf/add.cfm">
+                <input type="HIDDEN" NAME="userid" VALUE="C6296169">
+                <INPUT TYPE="HIDDEN" NAME="product" VALUE="Monk's Choice Green Tea">
+                <INPUT TYPE="HIDDEN" NAME="price" VALUE="12.95">	
+                <input type="hidden" name="scode" value="MM001">
+                <input type="hidden" name="return" value="www.mellowmonk.com/buyGreenTea.htm"> 
+                <input type="hidden" name="units" value="4">
+                <input type="image" src="https://www.mellowmonk.com/images/button_addToCart.gif" value="Submit"> 
+            </form>
+        </p> 
+    </div>
+</div>
+
+<div class="tea-descr-bottom">
+
+    <div class="tea-descr-more-about">
+        <h3>More about Monk's Choice&trade;</h3>
+        
+            This deeply steamed (fukamushi) sencha is of the 
+            <a target="_blank" href="https://www.mellowmonk.com/ourTea.htm">tamaryokucha</a> 
+            (&quot;curly green tea&quot;) type (also known as guricha), 
+            the most popular style on the island of Kyushu.
+            <span id="points">
+            
+            </span>
+
+            <span id="moreText">
+                Unlike the straight leaves of ordinary sencha, tamaryokucha leaves are 
+                <strong>curled</strong> during the tea-crafting process. This and other 
+                differences give tamaryokucha its distinctive fresh taste and 
+                <strong>muted astringency</strong> compared to some senchas. 
+                The rich <strong>volcanic</strong> soils of the Mt. Aso foothills, 
+                where this tea is grown, make for an exquisitely rich flavor and a hearty aroma, 
+                but without the bite that comes from other soil types.
+            
+
+                <p>
+                <strong>Packaging</strong>. 
+                Monk's Choice&trade; Green Tea comes vacuum-sealed for freshness in 
+                <strong>resealable, standup</strong> foil packets. Each packet contains 
+                100 grams (3.5 ounces) of tea, enough to make 40&ndash;50 cups of brewed tea.
+                    </p>
+
+                <p>
+                <strong>How to brew</strong>. 
+                Use 1 teaspoon of tea leaves for an 8-ounce cup with 
+                <a target="_blank" href="https://www.amazon.com/FORLIFE-Extra-fine-Infuser-Porcelain-Dish/dp/B001JP1KPO">strainer</a>. 
+                If using a teapot, use 1 teaspoon of tea for a small teapot or 2 teaspoons for a family-size teapot. 
+                The water temperature should be about 75 degrees Celsius (167 degrees Fahrenheit). 
+                If you don't have a thermometer, just heat the water until small bubbles begin 
+                to appear on the bottom of the pot, then remove from heat. 
+                (More on water temperature <a href="https://www.mellowmonk.com/2008/07/mellow-way-to-cool-boiled-water-to.html" target="_blank">here</a>.) 
+                For the first steeping, let the tea brew for about 2 minutes. 
+                For the second and third steepings, let the tea brew for 30 seconds to 1 minute. 
+                After each steeping, be sure to remove the leaves from the water &mdash; 
+                if using a strainer &mdash; or pour out all tea from the teapot. 
+                </p>
+            </span>
+
+        <button class="seeMoreLessButton" onclick="toggleText()" id="textButton">
+            Show More
+        </button>
+
+    </div>
+
+    <img src="/pictures/teas/tea_MonksChoice.jpg">
+
+    <div class="text-container">
+        <p><a  href="#top">[return to top]</a></p>
+    </div>
+</div>
+
+<hr class="styled-line">
+
+<!-- MONK'S CHOICE-->
+<div class="tea-descr-top">
+    <div class="tea-descr-label">
+        <a href="https://mellowmonk.com/buyGreenTea.htm#monks_choice"> 
+            <img src="pictures/teas/label_MonksChoice.jpg" title="Monk's Choice" alt="Monk's Choice">
+        </a>
+    </div>
+    <div class="tea-descr-buy">
+        <p><em>A flavorful but accessible green &mdash; crisp, earthy, and smooth</em>.</p>
+        <p><strong>Artisan:</strong> <a href="ourGrowers.htm#nagata" target="_blank">Koji Nagata</a>, Aso City, Kumamoto, Japan</p>
+        <p><strong>Aroma:</strong> Earthy and bright</p>
+        <p><strong>Taste:</strong> Full-bodied, rich</p>
+        <p>$12.95 per 100-gram packet</p>
+
+        <p>
+            <form method="POST" ACTION="https://ww10.aitsafe.com/cf/add.cfm">
+                <input type="HIDDEN" NAME="userid" VALUE="C6296169">
+                <INPUT TYPE="HIDDEN" NAME="product" VALUE="Monk's Choice Green Tea">
+                <INPUT TYPE="HIDDEN" NAME="price" VALUE="12.95">	
+                <input type="hidden" name="scode" value="MM001">
+                <input type="hidden" name="return" value="www.mellowmonk.com/buyGreenTea.htm"> 
+                <input type="hidden" name="units" value="4">
+                <input type="image" src="https://www.mellowmonk.com/images/button_addToCart.gif" value="Submit"> 
+            </form>
+        </p> 
+    </div>
+</div>
+
+<div class="tea-descr-bottom">
+
+    <div class="tea-descr-more-about">
+        <h3>More about Monk's Choice&trade;</h3>
+        
+            This deeply steamed (fukamushi) sencha is of the 
+            <a target="_blank" href="https://www.mellowmonk.com/ourTea.htm">tamaryokucha</a> 
+            (&quot;curly green tea&quot;) type (also known as guricha), 
+            the most popular style on the island of Kyushu.
+            <span id="points">
+            </span>
+
+            <span id="moreText">
+                Unlike the straight leaves of ordinary sencha, tamaryokucha leaves are 
+                <strong>curled</strong> during the tea-crafting process. This and other 
+                differences give tamaryokucha its distinctive fresh taste and 
+                <strong>muted astringency</strong> compared to some senchas. 
+                The rich <strong>volcanic</strong> soils of the Mt. Aso foothills, 
+                where this tea is grown, make for an exquisitely rich flavor and a hearty aroma, 
+                but without the bite that comes from other soil types.
+            
+
+                <p>
+                <strong>Packaging</strong>. 
+                Monk's Choice&trade; Green Tea comes vacuum-sealed for freshness in 
+                <strong>resealable, standup</strong> foil packets. Each packet contains 
+                100 grams (3.5 ounces) of tea, enough to make 40&ndash;50 cups of brewed tea.
+                    </p>
+
+                <p>
+                <strong>How to brew</strong>. 
+                Use 1 teaspoon of tea leaves for an 8-ounce cup with 
+                <a target="_blank" href="https://www.amazon.com/FORLIFE-Extra-fine-Infuser-Porcelain-Dish/dp/B001JP1KPO">strainer</a>. 
+                If using a teapot, use 1 teaspoon of tea for a small teapot or 2 teaspoons for a family-size teapot. 
+                The water temperature should be about 75 degrees Celsius (167 degrees Fahrenheit). 
+                If you don't have a thermometer, just heat the water until small bubbles begin 
+                to appear on the bottom of the pot, then remove from heat. 
+                (More on water temperature <a href="https://www.mellowmonk.com/2008/07/mellow-way-to-cool-boiled-water-to.html" target="_blank">here</a>.) 
+                For the first steeping, let the tea brew for about 2 minutes. 
+                For the second and third steepings, let the tea brew for 30 seconds to 1 minute. 
+                After each steeping, be sure to remove the leaves from the water &mdash; 
+                if using a strainer &mdash; or pour out all tea from the teapot. 
+                </p>
+            </span>
+
+        <button class="seeMoreLessButton" onclick="toggleText()" id="textButton">
+            Show More
+        </button>
+
+    </div>
+
+    <img src="/pictures/teas/tea_MonksChoice.jpg">
+
+    <div class="text-container">
+        <p><a  href="#top">[return to top]</a></p>
+    </div>
+</div>
+
+
+
+
+<div class="regular-container" id="Tea">
+    <h1> Tea Icon Links 🍵 </h1>
+</div>
+
+<div class="icon-row">
+	<a href="https://mellowmonk.com/buyGreenTea.htm#artisans_reserve"> 
+		<img src="pictures/teas/label_ArtisansReserve.jpg" title="Artisan's Reserve" alt="Artisan's Reserve">
+	</a>
+		
+	<a href="https://mellowmonk.com/buyGreenTea.htm#aso_black">
+		<img src="pictures/teas/label_AsoBlack.jpg", title="Aso Black">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#blissful_buds">
+		<img src="pictures/teas/label_BlissfulBuds.jpg", title="Blissful Buds">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#bbuds_bagged">
+		<img src="pictures/teas/label_BlissfulBudsBagged.jpg", title="Blissful Buds Bagged">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#frosty_garden">
+		<img src="pictures/teas/label_FrostyGarden.jpg", title="Frosty Garden">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#harmony_tea">
+		<img src="pictures/teas/label_HarmonyTea.jpg", title="Harmony Tea">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#kuma_green_1228">
+		<img src="pictures/teas/label_KumaGreen.jpg", title="Kuma Green 1228">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#monks_choice">
+		<img src="pictures/teas/label_MonksChoice.jpg", title="Monk's Choice">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#mountain_snow">
+		<img src="pictures/teas/label_MountainSnow.jpg", title="Mountain Snow">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#shaded_leaf">
+		<img src="pictures/teas/label_ShadedLeaf.jpg", title="Shaded Leaf">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#sleepy_cat">
+		<img src="pictures/teas/label_SleepyCat.jpg", title="Sleepy Cat">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#summer_select">
+		<img src="pictures/teas/label_SummerSelect.jpg", title="Summer Select">
+	</a>
+	
+	<a href="https://mellowmonk.com/buyGreenTea.htm#top_leaf">
+		<img src="pictures/teas/label_TopLeaf.jpg", title="Top Leaf">
+	</a>
+</div>
+<hr>
+
+<hr class="styled-line">
+
+<div class="regular-container" id="Gallery">
+<h1> Gallery 💖 </h1>
+</div>
+
+<div class="container">
+	<div class="centered-image">
+		<img src="pictures/pokki_nap.png" alt="">
+	</div>
+</div>
+
+<hr class="styled-line">
+
+<div class="container">
+	<div class="centered-image">
+		<img src="pictures/pokki_firefox.png" alt="">
+	</div>
+</div>
+
+<hr class="styled-line">
+
+<div class="container">
+	<div class="centered-image">
+		<img src="pictures/pokki_bright.png" alt="">
+	</div>
+</div>
+
+<hr class="styled-line">
+
+<div class="container">
+	<div class="centered-image">
+		<img src="pictures/pokki_switch.png" alt="">
+	</div>
+</div>
+
+
+<hr class="styled-line">
+
+<div class="regular-container">
+    <h3> Thank you for visiting 💖 </h3>
+</div>
+
+
+
+
+<script>
+    function toggleText() {
+        // Get all the elements from the page
+        let points =
+            document.getElementById("points");
+        let showMoreText =
+            document.getElementById("moreText");
+        let buttonText =
+            document.getElementById("textButton");
+
+        // If the display property of the dots to be displayed is already set to  'none' (that is hidden) then this section of code triggers
+        if (points.style.display === "none") {
+            // Hide the text between the span elements
+            showMoreText.style.display = "none";
+            // Show the dots after the text
+            points.style.display = "inline";
+            // Change the text on button to  'Show More'
+            buttonText.innerHTML = "Show More";
+        }
+
+        // If the hidden portion is revealed, we will change it back to be hidden
+        else {
+
+            // Show the text between the span elements
+            showMoreText.style.display = "inline";
+            // Hide the dots after the text
+            points.style.display = "none";
+            // Change the text on button to 'Show Less'
+            buttonText.innerHTML = "Show Less";
+        }
+    }
+</script>
+
+</body>
+</html>

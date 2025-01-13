@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        @font-face {
+            font-family: 'Cardo';
+            src: url('fonts/Cardo-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cardo';
+            src: url('fonts/Cardo-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Inconsolata';
+            src: url('fonts/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'DMSans';
+            src: url('fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Quicksand';
+            src: url('fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+            font-weight: 200;
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'PlayfairDisplay';
+            src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'PlayfairDisplay';
+            src: url('fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Cinzel';
+            src: url('fonts/Cinzel-VariableFont_wght.ttf') format('truetype');
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Newsreader';
+            src: url('fonts/Newsreader-VariableFont_opsz,wght.ttf') format('truetype');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Newsreader';
+            src: url('fonts/Newsreader-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+            font-style: italic;
+        }
+        @font-face {
+            font-family: 'Dosis';
+            src: url('fonts/Dosis-VariableFont_wght.ttf') format('truetype');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'CourierPrime';
+            src: url('fonts/CourierPrime.ttf') format('truetype');
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'CourierPrime';
+            src: url('fonts/CourierPrime-Bold.ttf') format('truetype');
+            font-style: bold;
+        }
+        .top_header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1vw;
+            font-family: 'Dosis';
+            letter-spacing: 0.2em; 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .intro {
+            display: flex;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .left_header {
+            width: 30%; 
+            background-color: #333;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .right_header {
+            width: 70%; 
+            background-image: url('pictures/nyc_skyline.png');
+            background-size: cover;
+            background-position: center;
+            text-align: left;
+            padding-left: 5vw;
+            padding-right: 10vw;
+            box-sizing: border-box;
+            color: white;
+            flex-direction: column;
+            display: flex;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .left_header img.profile {
+            max-width: 50%;
+            height: auto;
+            padding-top: 2vw;
+            margin-bottom: -2vw;
+            margin: 0 auto;
+            display: box;
+        }
+
+        .left_header img.icons {
+            max-width: 2.5vw;
+            height: auto;
+        }
+
+        .left_header p.name {
+            font-size: 3vw;
+            font-family: 'Newsreader', sans-serif;
+            font-weight: 800;
+            margin-bottom: 3vw;
+            margin-top: 4vw;
+        }
+
+        .left_header p.blurb {
+            font-size: 1.3vw;
+            font-family: 'Newsreader', sans-serif;
+            font-weight: 400;
+            margin-top: -2vw;
+            margin-bottom: 2vw;
+            line-height: 1;
+            /* letter-spacing: 0.05em;  */
+
+        }
+
+        .left_header p.info {
+            font-size: 1.5vw;
+            font-family: 'Dosis', monospace;
+            margin-bottom: 3vw;
+            letter-spacing: 0.1em; 
+
+        }
+
+        .left_header .links {
+            display: flex;
+            justify-content: center;
+            gap: 3vw;
+        }
+
+        .left_header .download-resume {
+            display: inline-block;
+            padding: 1vw 2vw;
+            background-color: #444;
+            color: white;
+            font-size: 1.3vw;
+            font-family: 'DMSans', monospace;
+            font-weight: bold;
+            text-decoration: none;
+            border: none;
+            border-radius: 3vw;
+            margin-top: 1.4vw;
+            margin-bottom: 3vw;
+            cursor: pointer;
+        }
+
+        .right_header p.hi {
+            font-family: 'Newsreader', sans-serif;
+            font-size: 5vw;
+            font-weight: 700;
+            margin-bottom: 0vw;
+        }
+
+        .right_header p.spiel {
+            font-family: 'Newsreader', sans-serif;
+            font-size: 2.5vw;
+            font-weight: 400;
+            flex-direction: column;
+            margin-top: -0.2vw;
+            margin-left: 2vw;
+            letter-spacing: 0.03em; 
+
+        }
+
+        .skills_container {
+            width: 30%;
+            text-align: left;
+            box-sizing: border-box;
+            color: white;
+            background-color: #585858;
+            padding: 0;
+            margin: 0;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2vw;
+            min-height: 100%;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skills_container p.title {
+            margin-left: 0vw;
+            margin-bottom: -2vw;
+            font-size: 2vw;
+            font-family: 'Newsreader', sans-serif;
+            font-weight: 800;
+            padding-top: 2vw;
+            padding-bottom: 0.2vw;
+        }
+
+        .skills p.list_title {
+            font-size: 1.5vw;
+            font-style: italic;
+            font-weight: 600;
+            margin-left: 2vw;
+            font-family: 'Newsreader', sans-serif;
+            margin-bottom: 0vw;
+        }
+
+        .skills p.skills_list {
+            font-size: 1.5vw;
+            font-family: 'Dosis', sans-serif;
+            margin-left: 3vw;
+            line-height: 1.4;
+            margin-bottom: -2vw;
+        }
+
+
+        /* Mobile site specs */
+        @media screen and (max-width: 800px) {
+            .intro {
+                flex-direction: column;
+            }
+            .left_header, .right_header, .skills_container {
+                width: 100%; 
+            }
+            .content {
+                flex-direction: column;
+            }
+
+            .left_header img.profile {
+                max-width: 40%;
+                padding-top: 10vw;
+            }
+
+            .left_header p.name {
+                font-size: 10vw;
+            }
+
+            .left_header p.blurb {
+                font-size: 5vw;
+            }
+
+            .left_header p.info {
+                font-size: 6vw;
+                margin-bottom: 10vw;
+            }
+
+            .left_header img.icons {
+                max-width: 8vw;
+            }
+
+            .left_header .links {
+                display: flex;
+                justify-content: center;
+                gap: 15vw;
+            }
+
+            .left_header .download-resume {
+                display: inline-block;
+                padding: 3vw 5vw;
+                background-color: #444;
+                color: white;
+                font-size: 4vw;
+                text-decoration: none;
+                border: none;
+                margin-top: 4vw;
+                margin-bottom: 6vw;
+                cursor: pointer;
+            }
+
+            .right_header {
+                text-align: center;
+            }
+
+            .right_header p.hi {
+                font-size: 12vw;
+            }
+
+            .right_header p.spiel {
+                font-size: 5vw;
+            }
+            .skills {
+                flex-direction: row;
+            }
+            .skills_container p.title {
+                font-size: 5vw;
+                margin-bottom: 1vw;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="top_header">Home | Resume | External Links</div>
+    
+    <div class="intro">
+
+        <div class="left_header">
+            <img class="profile" src="pictures/profile_pic.png" alt="ECK">
+            <p class="name">Erica Kotta</p>
+            <p class="blurb">
+                Condensed Matter Physics PhD<br><br><br>
+                <i>Researcher, Data Scientist</i><br>
+            </p>
+            <p class="info">
+                San Francisco Bay Area <br>
+                ericakotta@gmail.com
+            </p>
+            <p class="links">
+                <img class="icons" src="pictures/logo_linkedin.png">
+                <img class="icons" src="pictures/logo_gscholar.png">
+                <img class="icons" src="pictures/logo_github.png">
+            </p>
+            <button class="download-resume">Download Resume</button>
+        </div>
+
+        <div class="right_header">
+            <p class="hi">Hi, I'm Erica</p>
+            <p class="spiel"><i>
+                a quantum physics PhD<br>
+                with industry experience in<br>
+                data science and backend development,<br>
+                fluent in English and Japanese.</i>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="skills_container">
+            <p class="title">Technical Skills</p>
+
+            <div class="skills">
+                <p class="group_list">
+                    <p class="list_title">Languages</p>
+                    <p class="skills_list">
+                        Python (VSCode)<br>
+                        MATLAB<br>
+                        Shell (Git BASH)<br>
+                        Mathematica<br>
+                        SQL (Databricks)<br>
+                    </p>
+                </p>
+                <p class="group_list">
+                    <p class="list_title">Experimental Techniques</p>
+                    <p class="skills_list">
+                        Spectroscopy (ARPES)<br>
+                        UHV systems<br>
+                        Cryogenic systems<br>
+                        <i>ab initio</i> modeling (DFT)<br>
+                        semi-empirical modelig (LCAO)<br>
+                        A/B testing<br>
+                        Fourier analysis<br>
+                        digital image analysis<br>
+                        convolutional methods<br>
+                    </p>
+                </p>
+
+                <p class="group_list">
+                    <p class="list_title">Data Science Tools</p>
+                    <p class="skills_list">
+                        Statistics<br>
+                        Probability theory<br>
+                        Stochastic modeling<br>
+                        Machine learning (CNNs, XGBoost)<br>
+                    </p>
+                </p>
+
+                <p class="group_list">
+                    <p class="list_title">Infrastructure</p>
+                    <p class="skills_list">
+                        AWS<br>
+                        Github<br>
+                        Docker<br>
+                        CircleCI<br>
+
+                    </p>
+                </p>
+            </div>
+        </div>
+
+        <div class="rest">
+            ASDFASDFASDF
+        </div>
+        
+    </div>
+</body>
+</html>

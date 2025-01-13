@@ -48,23 +48,6 @@
             text-align: center;
         }
 
-        .profile_picture {
-            float: left;
-            width: 30%;
-            background-color: #333;
-        }
-        .blurb {
-            float: left;
-            width: 70%;
-            color: white;
-            font-size: 8vw;
-            background-color: #333;
-        }
-        .blurb p.name {
-            font-size: 8vw;
-            font-family: 'Cardo', serif;
-        }
-
         .left_header {
         float: left;
         width: 30%; /* The width is 20%, by default */
@@ -74,37 +57,37 @@
         }
 
         /* Desktop version specs */
-        .profile_picture img {
+        .left_header img.profile {
             max-width: 60%; /* Control the image size (80% of the container width) */
             height: auto; /* Keep the aspect ratio of the image */
             padding-top: 5vw;
             margin-bottom: -2vw; /* Space between the image and text */
         }
-        .info img.icons {
+        .left_header img.icons {
             max-width: 2.5vw; /* Width of the link icon images */
             height: auto;
         }
-        .info p.name {
+        .left_header p.name {
             font-size: 4vw;
             font-family: 'Cardo', sans-serif;
             font-weight: bold;
         }
-        .info p.blurb {
+        .left_header p.blurb {
             font-size: 1.8vw;
             font-family: 'Cardo', sans-serif;
         }
-        .info p.contact {
+        .left_header p.info {
             font-size: 2vw;
             font-family: 'Quicksand', monospace;
         }
-        .info .links {
+        .left_header .links {
             display: flex;
             justify-content: center;
             gap: 3vw;
         }
 
         /* Styling for the download button */
-        .info .download-resume {
+        .left_header .download-resume {
             display: inline-block;
             padding: 1vw 2vw; /* Padding above and below, and left/right */
             background-color: #444; /* Dark background color */
@@ -133,31 +116,31 @@
         @media screen and (max-width: 800px) {
 
         /* Mobile version specs */ 
-      
-        .profile_picture, .blurb {
+        .left_header, .right_header {
             width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
         }
-        .profile_picture img {
+        .left_header img.profile {
             max-width: 40%;
             padding-top: 10vw;
         }
-        .info p.name {
+        .left_header p.name {
             font-size: 10vw;
         }
-        .info p.blurb {
+        .left_header p.blurb {
             font-size: 5vw;
         }
-        .info p.contact {
+        .left_header p.info {
             font-size: 6vw;
         }
-info            max-width: 8vw;
+        .left_header img.icons {
+            max-width: 8vw;
         }
-        .info .links {
+        .left_header .links {
             display: flex;
             justify-content: center;
             gap: 15vw;
         }
-        .info .download-resume {
+        .left_header .download-resume {
             display: inline-block;
             padding: 3vw 5vw; /* Padding above and below, and left/right */
             background-color: #444; /* Dark background color */
@@ -180,21 +163,17 @@ info            max-width: 8vw;
 <body>
     <div class="top_header"> Home | Resume | External Links </div>
 
-    <div class="profile_picture">
-        <img src="pictures/aso_cat.jpg" alt="ECK">
-    </div>
-
-    <div class="blurb">
+    <div class="left_header">
+        <img class="profile" src="pictures/aso_cat.jpg" alt="ECK">
+        
         <p class="name">Erica Kotta</p>
-    </div>
-    <div class="info">
         <p class="blurb">
             Condensed Matter Physics PhD<br><br>
             Researcher<br>
             Data Scientist<br>
             Developer<br>
         </p>
-        <p class="contact">
+        <p class="info">
             San Francisco Bay Area <br>
             ericakotta@gmail.com
         </p>
