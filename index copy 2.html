@@ -112,11 +112,12 @@
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            align-items: center;
         }
 
         .right_header {
             width: 70%; 
-            background-image: url('pictures/nyc_skyline.png');
+            background-image: url('pictures/asakusa_skyline2.jpg');
             background-size: cover;
             background-position: center;
             text-align: left;
@@ -134,6 +135,7 @@
             display: flex;
             flex-direction: row;
             min-height: 100vh;
+            width: 100%;
         }
 
         *, *:before, *:after {
@@ -167,8 +169,8 @@
             font-family: 'Newsreader', sans-serif;
             font-weight: 400;
             margin-top: -2vw;
-            margin-bottom: 2vw;
-            line-height: 1;
+            margin-bottom: 1vw;
+            line-height: 0.75;
             /* letter-spacing: 0.05em;  */
 
         }
@@ -176,8 +178,8 @@
         .left_header p.info {
             font-size: 1.5vw;
             font-family: 'Dosis', monospace;
-            margin-bottom: 3vw;
-            letter-spacing: 0.1em; 
+            margin-bottom: 1vw;
+            letter-spacing: 0.02em; 
 
         }
 
@@ -185,11 +187,12 @@
             display: flex;
             justify-content: center;
             gap: 3vw;
+            margin-bottom: 2vw;
         }
 
         .left_header .download-resume {
-            display: inline-block;
-            padding: 1vw 2vw;
+            display: center;
+            padding: 0.5vw 2vw;
             background-color: #444;
             color: white;
             font-size: 1.3vw;
@@ -198,14 +201,27 @@
             text-decoration: none;
             border: none;
             border-radius: 3vw;
-            margin-top: 1.4vw;
-            margin-bottom: 3vw;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
             cursor: pointer;
+            white-space: nowrap;
+            
+            /* width: auto; */
         }
 
+        .spiel {
+            display: flex;
+            flex-direction: column;
+        }
+        .right_header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
         .right_header p.hi {
             font-family: 'Newsreader', sans-serif;
-            font-size: 5vw;
+            font-size: 4vw;
             font-weight: 700;
             margin-bottom: 0vw;
         }
@@ -215,16 +231,23 @@
             font-size: 2.5vw;
             font-weight: 400;
             flex-direction: column;
-            margin-top: -0.2vw;
+            margin-top: 0vw;
             margin-left: 2vw;
             letter-spacing: 0.03em; 
-
+        }
+        .right_header p.spiel_japanese {
+            font-size: 1.5vw;
+            font-weight: 600;
+            padding-left: 3vw;
+            padding-bottom: 16vw;
+            /* margin-top: 12vw; */
+            /* display: inline-block; */
         }
 
         .skills_container {
             width: 30%;
             text-align: left;
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
             color: white;
             background-color: #585858;
             padding: 0;
@@ -232,8 +255,9 @@
             height: auto;
             display: flex;
             flex-direction: column;
-            padding-left: 2vw;
             min-height: 100%;
+            padding-bottom: 5vw;
+            padding-left: 2vw;
         }
 
         .skills {
@@ -241,9 +265,18 @@
             flex-direction: column;
         }
 
-        .skills_container p.title {
-            margin-left: 0vw;
-            margin-bottom: -2vw;
+        p.section_title {
+            padding-left: 5vw;
+            padding-bottom: 0vw;
+            font-size: 2vw;
+            font-family: 'Newsreader', sans-serif;
+            font-weight: 800;
+            padding-top: 2vw;
+            padding-bottom: 0.2vw;
+        }
+        p.skills_section_title{
+            padding-left: 1vw;
+            padding-bottom: 0vw;
             font-size: 2vw;
             font-family: 'Newsreader', sans-serif;
             font-weight: 800;
@@ -257,7 +290,7 @@
             font-weight: 600;
             margin-left: 2vw;
             font-family: 'Newsreader', sans-serif;
-            margin-bottom: 0vw;
+            margin-bottom: 0.4vw;
         }
 
         .skills p.skills_list {
@@ -265,16 +298,76 @@
             font-family: 'Dosis', sans-serif;
             margin-left: 3vw;
             line-height: 1.4;
-            margin-bottom: -2vw;
+            margin-bottom: 1vw;
         }
 
+        .skills_group {
+            display: flex;
+            flex-direction: column;
+        }
 
+        .education_and_experience_container {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            width: 70%;
+            color: white;
+        }
+        .education_container {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            width: 100%;
+            color: white;
+            padding-bottom: 3vw;
+            
+        }
+        .experience_container {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            width: 100%;
+            color: white;
+            padding-bottom: 3vw;
+        }
+        p.education_item_title {
+            font-family: 'Newsreader', sans-serif;
+            font-weight: 400;
+            padding-left: 8vw;
+            line-height: 1.2;
+        }
+
+        p.education_item_courses {
+            font-family: 'Dosis', sans-serif;
+            padding-left: 8vw;
+            padding-right: 6vw;
+            font-weight: 200;
+        }
+        p.education_item_desc {
+            font-family: 'Newsreader', sans-serif;
+            padding-left: 8vw;
+            padding-right: 6vw;
+            font-weight: 200;
+            line-height: 1.2;
+        }
+
+        .references {
+            padding-bottom: 6vw;
+        }
+
+        p.reference_item {
+            font-family: 'Dosis', sans-serif;
+            font-weight: 200;
+            font-size: 1.2vw;
+            padding-left: 8vw;
+            padding-right: 6vw;
+        }
         /* Mobile site specs */
         @media screen and (max-width: 800px) {
             .intro {
                 flex-direction: column;
             }
-            .left_header, .right_header, .skills_container {
+            .left_header, .right_header, .skills_container, .education_and_experience_container {
                 width: 100%; 
             }
             .content {
@@ -296,11 +389,12 @@
 
             .left_header p.info {
                 font-size: 6vw;
-                margin-bottom: 10vw;
+                margin-bottom: 5vw;
             }
 
             .left_header img.icons {
                 max-width: 8vw;
+                margin-bottom: 4vw;
             }
 
             .left_header .links {
@@ -311,14 +405,15 @@
 
             .left_header .download-resume {
                 display: inline-block;
-                padding: 3vw 5vw;
+                padding: 3vw 4vw;
                 background-color: #444;
                 color: white;
                 font-size: 4vw;
                 text-decoration: none;
                 border: none;
-                margin-top: 4vw;
-                margin-bottom: 6vw;
+                border-radius: 10vw;
+                margin-top: 1vw;
+                margin-bottom: 3vw;
                 cursor: pointer;
             }
 
@@ -327,20 +422,54 @@
             }
 
             .right_header p.hi {
-                font-size: 12vw;
+                font-size: 10vw;
             }
 
             .right_header p.spiel {
                 font-size: 5vw;
             }
+            .right_header p.spiel_japanese {
+                font-size: 4vw;
+            }
             .skills {
                 flex-direction: row;
+                /* margin: 2vw 2w; */
+                justify-content: space-between;
+                padding-left: 5vw;
+                padding-right: 7vw;
             }
             .skills_container p.title {
-                font-size: 5vw;
+                font-size: 6vw;
                 margin-bottom: 1vw;
             }
+            .skills p.skills_list {
+                font-size: 2.5vw;
+                font-family: 'Dosis', sans-serif;
+                margin-left: 5vw;
+                line-height: 1.4;
+                margin-bottom: 1vw;
+            }
+            .skills p.list_title {
+                font-size: 3vw;
+            }
+            .right_header p.spiel_japanese {
+                padding-bottom: 15vw;
+            }
 
+            /* .skills_group {
+                margin: 200 100vw;
+            } */
+            p.section_title {
+                font-size: 6vw;
+                padding-left: 5vw;
+            }
+            p.skills_section_title {
+                font-size: 6vw;
+                padding-left: 3vw;
+            }
+            p.education_item_title {
+                padding-left: 8vw;
+            }
         }
 
     </style>
@@ -362,21 +491,36 @@
                 San Francisco Bay Area <br>
                 ericakotta@gmail.com
             </p>
+            <button class="download-resume">Download Resume</button>
             <p class="links">
                 <img class="icons" src="pictures/logo_linkedin.png">
                 <img class="icons" src="pictures/logo_gscholar.png">
                 <img class="icons" src="pictures/logo_github.png">
             </p>
-            <button class="download-resume">Download Resume</button>
+
         </div>
 
         <div class="right_header">
-            <p class="hi">Hi, I'm Erica</p>
-            <p class="spiel"><i>
-                a quantum physics PhD<br>
-                with industry experience in<br>
-                data science and backend development,<br>
-                fluent in English and Japanese.</i>
+            <div class="spiel">
+                <p class="hi">Welcome to my homepage!</p>
+                <p class="spiel">
+                    <i>
+                    I'm an experienced researcher <br>
+                    that loves to explore dynamic datasets <br>
+                    to find and visualize patterns <br>
+                    and make pretty plots. <br>
+                    </i>
+                    
+                    <!-- a quantum physics PhD<br>
+                    with industry experience in<br>
+                    research, data science and backend development,<br>
+                    fluent in English and Japanese.</i> -->
+
+                </p>
+            </div>
+            <p class="spiel_japanese">
+                そして阿蘇んもんです！<br>
+                どうも、よろしくお願いします。
             </p>
         </div>
 
@@ -385,59 +529,142 @@
     <div class="content">
 
         <div class="skills_container">
-            <p class="title">Technical Skills</p>
+            <p class="skills_section_title">Technical Skills</p>
 
             <div class="skills">
-                <p class="group_list">
-                    <p class="list_title">Languages</p>
+                <div class="skills_group">
+                    <p class="list_title">Languages & Software</p>
                     <p class="skills_list">
                         Python (VSCode)<br>
                         MATLAB<br>
                         Shell (Git BASH)<br>
                         Mathematica<br>
                         SQL (Databricks)<br>
+                        AWS<br>
+                        Github<br>
+                        CircleCI<br>
                     </p>
-                </p>
-                <p class="group_list">
+                </div>
+                <div class="skills_group">
                     <p class="list_title">Experimental Techniques</p>
                     <p class="skills_list">
                         Spectroscopy (ARPES)<br>
                         UHV systems<br>
                         Cryogenic systems<br>
                         <i>ab initio</i> modeling (DFT)<br>
-                        semi-empirical modelig (LCAO)<br>
-                        A/B testing<br>
+                        Semi-empirical modeling (LCAO)<br>
                         Fourier analysis<br>
-                        digital image analysis<br>
-                        convolutional methods<br>
+                        Digital image analysis<br>
                     </p>
-                </p>
+                </div>
 
-                <p class="group_list">
-                    <p class="list_title">Data Science Tools</p>
+                <div class="skills_group">
+                    <p class="list_title">Data Science Methods</p>
                     <p class="skills_list">
                         Statistics<br>
                         Probability theory<br>
                         Stochastic modeling<br>
                         Machine learning (CNNs, XGBoost)<br>
+                        Convolutional methods<br>
+                        A/B testing<br>
                     </p>
-                </p>
+                </div>
 
-                <p class="group_list">
+                <!-- <div class="skills_group">
                     <p class="list_title">Infrastructure</p>
                     <p class="skills_list">
                         AWS<br>
                         Github<br>
                         Docker<br>
                         CircleCI<br>
-
                     </p>
-                </p>
+                </div> -->
+
             </div>
         </div>
 
-        <div class="rest">
-            ASDFASDFASDF
+        <div class="education_and_experience_container">
+            <div class="education_container">
+                <p class="section_title">Education</p>
+
+                <p class="education_item_title">
+                    <b>PhD in Physics</b><br>
+                    New York University <i>(Aug 2016 - May 2022)</i>
+                </p>
+                <p class="education_item_courses">
+                    <b>GPA:</b> 3.82<br>
+                    <b>Relevant Courses:</b> Statistical mechanics, computational physics, quantum computing with noisy qubits, quantum field theory, classical dynamics, classical field theory </p>
+                <p class="education_item_desc">
+                    Studied topological insulator (TI) phase states using experimental and computational methods,
+                    with a focus on angle-resolved photoemission spectroscopy (ARPES) and electronic band structure calculations (ab initio and semi-empirical modeling).
+                    Developed a novel ARPES experimentation paradigm to achieve multi-sample doping analysis with a single sample,
+                    demonstrated with statistical analysis in Ref. [1] to achieve first ever experimental observation of hybridization in a TI.
+                    Developed open-source software implementing novel Fourier-based image filtering for ARPES data in Ref. [2].<br>
+                    Awarded Dean's Dissertation Fellowship 2021-2022.
+                    <br><br>
+                </p>
+
+                <p class="education_item_title">
+                    <b>Bachelors in Physics</b><br>
+                    Minor in Music<br>
+                    University of California, Berkeley <i>(Aug 2009 - May 2013)</i>
+                </p>
+                <p class="education_item_courses">
+                    <b>GPA:</b> 3.70<br>
+                    <b>Relevant Courses:</b> Quantum mechanics, advanced electronics lab </p>
+                <p class="education_item_desc">
+                    Built an optical theremin for Advanced Electronics Lab final, which was pretty rad.<br>
+                    As a Lab Assistant at the Space Sciences Lab,
+                    I designed and built a circuit board to detect and process magnetic and electric fields in aurora,
+                    deployed on the sounding rocket project GREECE, launched out of Fairbanks, AK in 2014 (see Ref. [3]).
+                </p>
+            </div>
+
+            <div class="experience_container">
+                <p class="section_title">Experience</p>
+
+                <p class="education_item_title">
+                    <b>Physical Scientist II</b><br>
+                    LeoLabs <i>in</i> Menlo Park, CA <i>(Jan 2023 - Present)</i></p>
+                <p class="education_item_desc">
+                    Lead team to achieve company goals, identifying the research and development required by the team to meet goal targets.
+                    Worked in Databricks to query large company databases and monitor company data quality metrics.
+                    Developed workflows in DataDog to monitor and alert on data quality, with automated responses (in backend repositories).
+                </p>
+
+                <p class="education_item_title">
+                    <b>Physical Scientist I</b><br>
+                    LeoLabs <i>in</i> Menlo Park, CA <i>(Jun 2022 - Jan 2023)</i></p>
+                <p class="education_item_desc">
+                    Developed original software in Python, Shell to visualize data quality, used across several teams. 
+                    Worked in AWS environment (SNS/SQS, S3, ECR/ECS, EKS, DynamoDB) to implement a disaster recovery plan in the cloud. 
+                    Improved physical modeling tools used in production pipeline to track satellites using radar data.
+                </p>
+                
+                <p class="education_item_title">
+                    <b>R&D Engineer IV</b><br>
+                    Space Sciences Lab <i>in</i> Berkeley, CA <i>(May 2013 - May 2016)</i>
+                </p>
+                <p class="education_item_desc">
+                    Developed original software in Python, Shell to visualize data quality, used across several teams. 
+                    Worked in AWS environment (SNS/SQS, S3, ECR/ECS, EKS, DynamoDB) to implement a disaster recovery plan in the cloud. 
+                    Improved physical modeling tools used in production pipeline to track satellites using radar data.
+                </p>
+
+            </div>
+
+            <div class="references">
+                <p class="section_title">References</p>
+                <p class="reference_item">
+                    [2] Shouzheng Liu, Erica Kotta, Yishuai Xu, Joshua Mutch, Jiun-Haw Chu, Moritz Hoesch, Sanjoy Kr Mahatha, Jonathan D. Denlinger, L. Andrew Wray. 
+                    <i>Fourier-based methods for removing mesh anomalies from angle resolved photoemission spectra</i>.
+                    Journal of Electron Spectroscopy and Related Phenomena Vol. 260 147255, 2022.
+                </p>
+                <p class="reference_item">
+                    [3] Ground-to-Rocket Electrodynamics-Electrons Correlative Experiment (GREECE) https://www.ssl.berkeley.edu/earth-geospace/greece-fact-sheet/
+                </p>
+
+            </div>
         </div>
         
     </div>
