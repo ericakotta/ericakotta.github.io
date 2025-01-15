@@ -136,7 +136,7 @@ body {
 }
 
 .left_header p.name {
-    font-size: 3vw;
+    font-size: 2rem;
     font-family: 'Garamond', serif;
     font-weight: 800;
     margin-bottom: 3vw;
@@ -144,7 +144,7 @@ body {
 }
 
 .left_header p.blurb {
-    font-size: 1.3vw;
+    font-size: 1rem;
     font-family: 'Garamond', serif;
     font-weight: 400;
     margin-top: -2vw;
@@ -155,7 +155,7 @@ body {
 }
 
 .left_header p.info {
-    font-size: 1.5vw;
+    font-size: 0.8rem;
     font-family: 'Courier New', monospace;
     margin-bottom: 1vw;
     letter-spacing: 0.02em; 
@@ -362,15 +362,15 @@ p.reference_item {
     }
 
     .left_header p.name {
-        font-size: 8vw;
+        font-size: 2.5rem;
     }
 
     .left_header p.blurb {
-        font-size: 2.5vw;
+        font-size: 1.5rem;
     }
 
     .left_header p.info {
-        font-size: 2vw;
+        font-size: 1.5rem;
         margin-bottom: 5vw;
     }
 
