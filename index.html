@@ -91,9 +91,17 @@
         }
         a:hover {
             color: #E1F5FE;
-        }s
+        }
         a:visited {
             color: #80DEEA;
+        }
+        .top_header a {
+            color: white;
+            text-decoration: none;
+        }
+        .top_header a:hover {
+            color: white;
+            text-decoration: underline;
         }
 
         body {
@@ -394,7 +402,7 @@
             }
 
             .left_header p.blurb {
-                font-size: 5vw;
+                font-size: 3vw;
             }
 
             .left_header p.info {
@@ -436,10 +444,10 @@
             }
 
             .right_header p.spiel {
-                font-size: 5vw;
+                font-size: 4vw;
             }
             .right_header p.spiel_japanese {
-                font-size: 4vw;
+                font-size: 3.3vw;
             }
             .skills {
                 flex-direction: row;
@@ -489,7 +497,11 @@
 </head>
 
 <body>
-    <div class="top_header">Home | Resume | External Links</div>
+    <div class="top_header">
+        <a href="https://ericakotta.github.io">Home</a> | 
+        Resume | 
+        External Links
+    </div>
     
     <div class="intro">
 
@@ -504,11 +516,21 @@
                 San Francisco Bay Area <br>
                 ericakotta@gmail.com
             </p>
-            <button class="download-resume">Download Resume</button>
+            <a href="downloads/ericakotta_resume.pdf" download>
+                <button class="download-resume">
+                    Download Resume
+                </button>
+            </a>
             <p class="links">
-                <img class="icons" src="pictures/logo_linkedin.png">
-                <img class="icons" src="pictures/logo_gscholar.png">
-                <img class="icons" src="pictures/logo_github.png">
+                <a href="https://linkedin.com/in/erica-kotta">
+                    <img class="icons" src="pictures/logo_linkedin.png">
+                </a>
+                <a href="https://scholar.google.com/citations?user=M3GBHGkAAAAJ0">
+                    <img class="icons" src="pictures/logo_gscholar.png">
+                </a>
+                <a href="https://github.com/ericakotta">
+                    <img class="icons" src="pictures/logo_github.png">
+                </a>
             </p>
 
         </div>
