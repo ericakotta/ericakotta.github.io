@@ -96,7 +96,7 @@ body {
 
 .right_header {
     width: 70%; 
-    background-image: url('pictures/asakusa_skyline2.jpg');
+    background-image: url('../pictures/asakusa_skyline2.jpg');
     background-size: cover;
     background-position: center;
     text-align: left;
