@@ -11,6 +11,45 @@ body {
     overflow-x: hidden;
 }
 @font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-display: swap;
+}
+
+
+
+@font-face {
     font-family: 'KiwiMaru';
     src: url('../fonts/KiwiMaru-Medium.ttf') format('truetype');
     font-style: normal;
@@ -359,7 +398,7 @@ p.skills_section_title{
     padding-bottom: 3vw;
 }
 p.education_item_title {
-    font-family: 'Newsreader', 'Garamond', serif;
+    font-family: 'Libre Bodoni', 'Garamond', serif;
     font-size: 1.4rem;
     font-weight: 400;
     padding-left: 8vw;
@@ -380,7 +419,7 @@ p.education_item_courses {
     font-weight: 200;
 }
 p.education_item_desc {
-    font-family: 'Garamond', sans-serif;
+    font-family: 'Newsreader', 'Garamond', serif;
     padding-left: 8vw;
     padding-right: 6vw;
     font-weight: 200;
@@ -392,9 +431,9 @@ p.education_item_desc {
 }
 
 p.reference_item {
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Dosis', 'Courier New', sans-serif;
     font-weight: 200;
-    font-size: 1.5vw;
+    font-size: 1.2rem;
     padding-left: 8vw;
     padding-right: 6vw;
 }
@@ -524,6 +563,12 @@ p.reference_item {
     }
     p.education_item_title {
         padding-left: 8vw;
+    }
+    p.education_item_courses {
+        font-size: 1.2rem;
+    }
+    p.education_item_desc {
+        font-size: 1.3rem;
     }
     p.reference_item {
         font-size: 1rem;
