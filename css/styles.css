@@ -117,14 +117,14 @@ body {
     width: 100%;
 }
 
-/* *, *:before, *:after {
+*, *:before, *:after {
     box-sizing: inherit;
-} */
+}
 
 .left_header img.profile {
     max-width: 50%;
     height: auto;
-    padding-top: 2vw;
+    margin-top: 2vw;
     margin-bottom: -2vw;
     margin: 0 auto;
     display: box;
@@ -139,9 +139,9 @@ body {
 .left_header p.name {
     font-size: 3vw;
     font-family: 'Newsreader', serif;
-    font-weight: 800;
-    padding-bottom: 3vw;
-    padding-top: 4vw;
+    font-weight: 700;
+    margin-bottom: 3vw;
+    margin-top: 4vw;
     line-height: 1.0;
 }
 .left_header p.self_title {
