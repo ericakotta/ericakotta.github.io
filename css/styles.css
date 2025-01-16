@@ -60,7 +60,17 @@ body {
     font-style: normal;
     font-display: swap;
 }
-
+@font-face {
+    font-family: 'Libre Bodoni';
+    src: url('../fonts/LibreBodoni-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Libre Bodoni';
+    src: url('../fonts/LibreBodoni-Italic-VariableFont_wght.ttf') format('truetype');
+    font-style: italic;
+    font-display: swap;
+}
 .top_header {
     width: 100%;
     background-color: #333;
@@ -121,14 +131,16 @@ body {
 
 .right_header {
     width: 70%; 
-    background-image: url('../pictures/asakusa_skyline2.jpg');
+    /* background-image: url('../pictures/asakusa_skyline2.jpg'); */
+    /* background-image: url('../pictures/nyc_pano.png'); */
+    background-image: url('../pictures/nyc_sunset_skyline.png');
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     text-align: left;
     padding-left: 5vw;
     padding-right: 10vw;
     box-sizing: border-box;
-    color: white;
+    color: rgb(29, 28, 28);
     flex-direction: column;
     display: flex;
 }
@@ -229,20 +241,21 @@ body {
 .right_header {
     display: flex;
     flex-direction: column;
+    padding-bottom: 5vw;
     /* justify-content: space-between; */
 
 }
 .right_header p.hi {
-    font-family: 'Garamond', serif;
+    font-family: 'Libre Bodoni', 'Garamond', serif;
     font-size: 4vw;
-    font-weight: 700;
+    font-weight: 600;
     padding-bottom: 1vw;
     padding-top: 5vw;
 }
 
 .right_header p.spiel {
     font-family: 'Newsreader', 'Garamond', serif;
-    font-size: 2.5vw;
+    font-size: 1.5rem;
     font-weight: 400;
     flex-direction: column;
     margin-top: 0vw;
@@ -250,8 +263,8 @@ body {
     letter-spacing: 0.03em; 
 }
 .right_header p.spiel_japanese {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 200;
     padding-left: 3vw;
     font-family: 'KiwiMaru', monospace;
     /* padding-bottom: 16vw; */
@@ -387,7 +400,7 @@ p.reference_item {
 }
 
 /* Mobile site specs */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
 
     html {
         font-size: 12px;
@@ -457,6 +470,7 @@ p.reference_item {
     .right_header {
         padding-top: 5vw;
         text-align: center;
+        padding-bottom: 20vw;
     }
 
     .right_header p.hi {
