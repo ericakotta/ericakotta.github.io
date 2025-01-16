@@ -142,14 +142,18 @@ body {
     margin-bottom: 3vw;
     margin-top: 4vw;
 }
-
+.left_header p.title {
+    font-family: 'Newsreader', serif;
+    font-size: 1.5vw;
+    margin-top: -2vw;
+}
 .left_header p.blurb {
     font-size: 1.3vw;
     font-family: 'Newsreader', serif;
     font-weight: 400;
-    margin-top: -2vw;
+    margin-top: 0;
     margin-bottom: 1vw;
-    line-height: 0.75;
+    /* line-height: 0.75; */
     /* letter-spacing: 0.05em;  */
 
 }
@@ -195,14 +199,15 @@ body {
 .right_header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
 }
 .right_header p.hi {
     font-family: 'Newsreader', sans-serif;
     font-size: 4vw;
     font-weight: 700;
-    margin-bottom: 0vw;
+    padding-bottom: 1vw;
+    padding-top: 5vw;
 }
 
 .right_header p.spiel {
@@ -218,7 +223,7 @@ body {
     font-size: 1.5vw;
     font-weight: 600;
     padding-left: 3vw;
-    padding-bottom: 16vw;
+    /* padding-bottom: 16vw; */
     /* margin-top: 12vw; */
     /* display: inline-block; */
 }
@@ -259,8 +264,8 @@ p.skills_section_title{
     font-size: 2vw;
     font-family: 'Newsreader', sans-serif;
     font-weight: 800;
-    padding-top: 2vw;
-    padding-bottom: 0.2vw;
+    padding-top: 4vw;
+    padding-bottom: 2vw;
 }
 
 .skills p.list_title {
@@ -269,7 +274,7 @@ p.skills_section_title{
     font-weight: 600;
     margin-left: 2vw;
     font-family: 'Newsreader', sans-serif;
-    margin-bottom: 0.4vw;
+    padding-bottom: 1vw;
 }
 
 .skills p.skills_list {
@@ -362,15 +367,19 @@ p.reference_item {
     }
 
     .left_header p.name {
-        font-size: 2.5vw;
+        font-size: 7vw;
+    }
+
+    .left_header p.title {
+        font-size: 3.5vw;
     }
 
     .left_header p.blurb {
-        font-size: 1.5vw;
+        font-size: 4vw;
     }
 
     .left_header p.info {
-        font-size: 1.5vw;
+        font-size: 4vw;
         margin-bottom: 5vw;
     }
 
@@ -400,11 +409,13 @@ p.reference_item {
     }
 
     .right_header {
+        padding-top: 5vw;
         text-align: center;
     }
 
     .right_header p.hi {
         font-size: 10vw;
+        padding-top: 3vw;
     }
 
     .right_header p.spiel {
@@ -433,9 +444,11 @@ p.reference_item {
     }
     .skills p.list_title {
         font-size: 3vw;
+        padding-bottom: 1vw;
     }
     .right_header p.spiel_japanese {
-        padding-bottom: 15vw;
+        font-size: 3vw;
+        padding-bottom: 5vw;
     }
 
     p.section_title {
@@ -445,6 +458,8 @@ p.reference_item {
     p.skills_section_title {
         font-size: 6vw;
         padding-left: 3vw;
+        padding-top: 5vw;
+        padding-bottom: 2vw;
     }
     p.education_item_title {
         padding-left: 8vw;
