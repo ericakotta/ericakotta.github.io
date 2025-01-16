@@ -10,7 +10,31 @@ html, body {
 body {
     overflow-x: hidden;
 }
-/* 
+@font-face {
+    font-family: 'KiwiMaru';
+    src: url('../fonts/KiwiMaru-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CourierPrime';
+    src: url('../fonts/CourierPrime-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CourierPrime';
+    src: url('../fonts/CourierPrime-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'CourierPrime';
+    src: url('../fonts/CourierPrime-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+}
 @font-face {
     font-family: 'DMSans';
     src: url('../fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
@@ -35,7 +59,7 @@ body {
     src: url('../fonts/Dosis-VariableFont_wght.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
-} */
+}
 
 .top_header {
     width: 100%;
@@ -43,7 +67,7 @@ body {
     color: white;
     text-align: center;
     padding: 1vw;
-    font-family: 'Tahoma';
+    font-family: 'Dosis', 'Tahoma', 'sans-serif';
     letter-spacing: 0.2em; 
 }
 
@@ -63,6 +87,7 @@ a:visited {
 .top_header a:hover {
     color: white;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 body {
@@ -131,14 +156,14 @@ body {
 }
 
 .left_header img.icons {
-    max-width: 2.5vw;
+    max-width: 2.2vw;
     height: auto;
     line-height: 1.0;
 }
 
 .left_header p.name {
     font-size: 1rem;
-    font-family: 'Garamond', serif;
+    font-family: 'Newsreader', serif;
     /* font-weight: 700; */
     margin-bottom: 3vw;
     margin-top: 4vw;
@@ -163,7 +188,7 @@ body {
 }
 
 .left_header p.info {
-    font-size: 1.5vw;
+    font-size: 1rem;
     font-family: 'Courier New', monospace;
     padding-bottom: 2vw;
     letter-spacing: 0.02em; 
@@ -216,7 +241,7 @@ body {
 }
 
 .right_header p.spiel {
-    font-family: 'Garamond', serif;
+    font-family: 'Newsreader', 'Garamond', serif;
     font-size: 2.5vw;
     font-weight: 400;
     flex-direction: column;
@@ -225,9 +250,10 @@ body {
     letter-spacing: 0.03em; 
 }
 .right_header p.spiel_japanese {
-    font-size: 1.5vw;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 400;
     padding-left: 3vw;
+    font-family: 'KiwiMaru', monospace;
     /* padding-bottom: 16vw; */
     /* margin-top: 12vw; */
     /* display: inline-block; */
@@ -257,34 +283,34 @@ body {
 p.section_title {
     padding-left: 5vw;
     padding-bottom: 0vw;
-    font-size: 2vw;
-    font-family: 'Garamond', serif;
+    font-size: 2rem;
+    font-family: 'CourierPrime','Courier', monospace;
     font-weight: 800;
-    padding-top: 2vw;
+    margin-top: 3.5vw;
     padding-bottom: 0.2vw;
 }
 p.skills_section_title{
     padding-left: 1vw;
     padding-bottom: 0vw;
-    font-size: 2vw;
-    font-family: 'Garamond', serif;
+    font-size: 1.2rem;
+    font-family: "CourierPrime", "Courier", serif;
     font-weight: 800;
     padding-top: 4vw;
     padding-bottom: 2vw;
 }
 
 .skills p.list_title {
-    font-size: 1.5vw;
+    font-size: 1.1rem;
     font-style: italic;
     font-weight: 600;
     margin-left: 2vw;
-    font-family: 'Garamond', serif;
+    font-family: 'Newsreader', 'Garamond', serif;
     padding-bottom: 1vw;
 }
 
 .skills p.skills_list {
-    font-size: 1.5vw;
-    font-family: 'Tahoma', sans-serif;
+    font-size: 1.0rem;
+    font-family: 'Dosis', 'Tahoma', sans-serif;
     margin-left: 3vw;
     line-height: 1.4;
     margin-bottom: 1vw;
@@ -320,14 +346,22 @@ p.skills_section_title{
     padding-bottom: 3vw;
 }
 p.education_item_title {
-    font-family: 'Garamond', sans-serif;
+    font-family: 'Newsreader', 'Garamond', serif;
+    font-size: 1.4rem;
     font-weight: 400;
     padding-left: 8vw;
-    line-height: 1.2;
+    line-height: 1.0;
+}
+p.education_item_school {
+    font-family: 'Newsreader', 'Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding-left: 8vw;
+    line-height: 1.0;
 }
 
 p.education_item_courses {
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Dosis', 'Tahoma', sans-serif;
     padding-left: 8vw;
     padding-right: 6vw;
     font-weight: 200;
@@ -351,6 +385,7 @@ p.reference_item {
     padding-left: 8vw;
     padding-right: 6vw;
 }
+
 /* Mobile site specs */
 @media screen and (max-width: 800px) {
 
@@ -395,7 +430,7 @@ p.reference_item {
     }
 
     .left_header img.icons {
-        max-width: 8vw;
+        max-width: 7vw;
         margin-bottom: 4vw;
     }
 
@@ -433,7 +468,7 @@ p.reference_item {
         font-size: 4vw;
     }
     .right_header p.spiel_japanese {
-        font-size: 3.3vw;
+        font-size: 10rem;
     }
     .skills {
         flex-direction: row;
@@ -447,27 +482,28 @@ p.reference_item {
         margin-bottom: 1vw;
     }
     .skills p.skills_list {
-        font-size: 2.5vw;
+        font-size: 1.4rem;
         /* font-family: 'Ta', sans-serif; */
         margin-left: 5vw;
         line-height: 1.4;
         margin-bottom: 1vw;
     }
     .skills p.list_title {
-        font-size: 3vw;
+        font-size: 1.5rem;
         padding-bottom: 1vw;
     }
     .right_header p.spiel_japanese {
-        font-size: 3vw;
+        font-size: 1.3rem;
         padding-bottom: 5vw;
+        font-weight: 200;
     }
 
     p.section_title {
-        font-size: 6vw;
+        font-size: 3rem;
         padding-left: 5vw;
     }
     p.skills_section_title {
-        font-size: 6vw;
+        font-size: 3rem;
         padding-left: 3vw;
         padding-top: 5vw;
         padding-bottom: 2vw;
@@ -476,6 +512,6 @@ p.reference_item {
         padding-left: 8vw;
     }
     p.reference_item {
-        font-size: 2.3vw;
+        font-size: 1rem;
     }
 }
