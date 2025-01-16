@@ -146,6 +146,7 @@ body {
     font-family: 'Newsreader', serif;
     font-size: 1.5vw;
     padding-top: -2vw;
+    line-height: 1.0;
 }
 .left_header p.blurb {
     font-size: 1.3vw;
@@ -372,6 +373,7 @@ p.reference_item {
 
     .left_header p.title {
         font-size: 3.5vw;
+        line-height: 1.0;
     }
 
     .left_header p.blurb {
