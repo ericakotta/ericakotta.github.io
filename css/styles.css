@@ -133,6 +133,7 @@ body {
 .left_header img.icons {
     max-width: 2.5vw;
     height: auto;
+    line-height: 1.0;
 }
 
 .left_header p.name {
@@ -141,6 +142,7 @@ body {
     font-weight: 800;
     padding-bottom: 3vw;
     padding-top: 4vw;
+    line-height: 1.0;
 }
 .left_header p.self_title {
     font-family: 'Garamond', serif;
@@ -154,6 +156,7 @@ body {
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 1vw;
+    line-height: 1.0;
     /* line-height: 0.75; */
     /* letter-spacing: 0.05em;  */
 
@@ -164,6 +167,7 @@ body {
     font-family: 'Dosis', monospace;
     padding-bottom: 2vw;
     letter-spacing: 0.02em; 
+    line-height: 1.0;
 
 }
 
