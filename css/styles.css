@@ -117,9 +117,9 @@ body {
     width: 100%;
 }
 
-*, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: inherit;
-}
+} */
 
 .left_header img.profile {
     max-width: 50%;
@@ -138,14 +138,14 @@ body {
 .left_header p.name {
     font-size: 3vw;
     font-family: 'Newsreader', serif;
-    font-weight: 800;
+    font-weight: 600;
     padding-bottom: 3vw;
     padding-top: 4vw;
 }
-.left_header p.title {
-    font-family: 'Newsreader', serif;
+.left_header p.self_title {
+    font-family: 'Garamond', serif;
     font-size: 1.5vw;
-    padding-top: -2vw;
+    /* padding-top: -2vw; */
     line-height: 1.0;
 }
 .left_header p.blurb {
@@ -371,7 +371,7 @@ p.reference_item {
         font-size: 7vw;
     }
 
-    .left_header p.title {
+    .left_header p.self_title {
         font-size: 3.5vw;
         line-height: 1.0;
     }
