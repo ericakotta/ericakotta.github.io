@@ -145,7 +145,7 @@ body {
 .left_header p.title {
     font-family: 'Newsreader', serif;
     font-size: 1.5vw;
-    margin-top: -2vw;
+    padding-top: -2vw;
 }
 .left_header p.blurb {
     font-size: 1.3vw;
