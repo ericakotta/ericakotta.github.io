@@ -10,7 +10,7 @@ html, body {
 body {
     overflow-x: hidden;
 }
-
+/* 
 @font-face {
     font-family: 'DMSans';
     src: url('../fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
@@ -35,7 +35,7 @@ body {
     src: url('../fonts/Dosis-VariableFont_wght.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
-}
+} */
 
 .top_header {
     width: 100%;
@@ -43,7 +43,7 @@ body {
     color: white;
     text-align: center;
     padding: 1vw;
-    font-family: 'Dosis';
+    font-family: 'Tahoma';
     letter-spacing: 0.2em; 
 }
 
@@ -138,7 +138,7 @@ body {
 
 .left_header p.name {
     font-size: 3vw;
-    font-family: 'Newsreader', serif;
+    font-family: 'Garamond', serif;
     font-weight: 700;
     margin-bottom: 3vw;
     margin-top: 4vw;
@@ -152,7 +152,7 @@ body {
 }
 .left_header p.blurb {
     font-size: 1.3vw;
-    font-family: 'Newsreader', serif;
+    font-family: 'Garamond', serif;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 1vw;
@@ -164,7 +164,7 @@ body {
 
 .left_header p.info {
     font-size: 1.5vw;
-    font-family: 'Dosis', monospace;
+    font-family: 'Courier New', monospace;
     padding-bottom: 2vw;
     letter-spacing: 0.02em; 
     line-height: 1.0;
@@ -184,7 +184,7 @@ body {
     background-color: #444;
     color: white;
     font-size: 1.3vw;
-    font-family: 'DMSans', monospace;
+    font-family: 'Arial', monospace;
     font-weight: bold;
     text-decoration: none;
     border: none;
@@ -208,7 +208,7 @@ body {
 
 }
 .right_header p.hi {
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     font-size: 4vw;
     font-weight: 700;
     padding-bottom: 1vw;
@@ -216,7 +216,7 @@ body {
 }
 
 .right_header p.spiel {
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     font-size: 2.5vw;
     font-weight: 400;
     flex-direction: column;
@@ -258,7 +258,7 @@ p.section_title {
     padding-left: 5vw;
     padding-bottom: 0vw;
     font-size: 2vw;
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     font-weight: 800;
     padding-top: 2vw;
     padding-bottom: 0.2vw;
@@ -267,7 +267,7 @@ p.skills_section_title{
     padding-left: 1vw;
     padding-bottom: 0vw;
     font-size: 2vw;
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     font-weight: 800;
     padding-top: 4vw;
     padding-bottom: 2vw;
@@ -278,13 +278,13 @@ p.skills_section_title{
     font-style: italic;
     font-weight: 600;
     margin-left: 2vw;
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     padding-bottom: 1vw;
 }
 
 .skills p.skills_list {
     font-size: 1.5vw;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     margin-left: 3vw;
     line-height: 1.4;
     margin-bottom: 1vw;
@@ -320,20 +320,20 @@ p.skills_section_title{
     padding-bottom: 3vw;
 }
 p.education_item_title {
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     font-weight: 400;
     padding-left: 8vw;
     line-height: 1.2;
 }
 
 p.education_item_courses {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Tahoma', sans-serif;
     padding-left: 8vw;
     padding-right: 6vw;
     font-weight: 200;
 }
 p.education_item_desc {
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Garamond', sans-serif;
     padding-left: 8vw;
     padding-right: 6vw;
     font-weight: 200;
@@ -345,7 +345,7 @@ p.education_item_desc {
 }
 
 p.reference_item {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Courier New', sans-serif;
     font-weight: 200;
     font-size: 1.5vw;
     padding-left: 8vw;
@@ -443,7 +443,7 @@ p.reference_item {
     }
     .skills p.skills_list {
         font-size: 2.5vw;
-        font-family: 'Dosis', sans-serif;
+        /* font-family: 'Ta', sans-serif; */
         margin-left: 5vw;
         line-height: 1.4;
         margin-bottom: 1vw;
