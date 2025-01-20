@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 html, body {
     width: 100%;
 }
@@ -46,9 +49,6 @@ body {
     font-weight: 800;
     font-display: swap;
 }
-
-
-
 @font-face {
     font-family: 'KiwiMaru';
     src: url('../fonts/KiwiMaru-Medium.ttf') format('truetype');
@@ -164,22 +164,24 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
     margin: 0;
 }
 
 .right_header {
     width: 70%; 
-    /* background-image: url('../pictures/asakusa_skyline2.jpg'); */
+    background-image: url('../pictures/asakusa_skyline2.png');
     /* background-image: url('../pictures/nyc_pano.png'); */
-    background-image: url('../pictures/nyc_sunset_skyline.png');
+    /* background-image: url('../pictures/nyc_sunset_skyline.png'); */
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     text-align: left;
     padding-left: 5vw;
     padding-right: 10vw;
+    padding-bottom: 20vw;
     box-sizing: border-box;
-    color: rgb(29, 28, 28);
+    color: white; /* rgb(29, 28, 28);*/
     flex-direction: column;
     display: flex;
 }
@@ -280,7 +282,7 @@ body {
 .right_header {
     display: flex;
     flex-direction: column;
-    padding-bottom: 5vw;
+    padding-bottom: 20vw;
     /* justify-content: space-between; */
 
 }
@@ -441,10 +443,6 @@ p.reference_item {
 /* Mobile site specs */
 @media screen and (max-width: 700px) {
 
-    html {
-        font-size: 12px;
-    }
-
     .intro {
         flex-direction: column;
     }
@@ -464,7 +462,7 @@ p.reference_item {
     }
 
     .left_header p.name {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 
     .left_header p.self_title {
