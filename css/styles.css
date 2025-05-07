@@ -116,6 +116,7 @@ body {
     color: white;
     text-align: center;
     padding: 1vw;
+    box-sizing: border-box;
     font-family: 'Dosis', 'Tahoma', 'sans-serif';
     letter-spacing: 0.2em; 
 }
@@ -193,6 +194,7 @@ body {
     flex-direction: row;
     min-height: 100vh;
     width: 100%;
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -316,7 +318,7 @@ body {
 .skills_container {
     width: 30%;
     text-align: left;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     color: white;
     background-color: #585858;
     margin: 0;
@@ -381,6 +383,7 @@ p.skills_section_title{
     background-color: #333;
     width: 70%;
     color: white;
+    box-sizing: border-box;
 }
 .education_container {
     display: flex;
@@ -389,7 +392,7 @@ p.skills_section_title{
     width: 100%;
     color: white;
     padding-bottom: 3vw;
-    
+    box-sizing: border-box;
 }
 .experience_container {
     display: flex;
@@ -398,6 +401,7 @@ p.skills_section_title{
     width: 100%;
     color: white;
     padding-bottom: 3vw;
+    box-sizing: border-box;
 }
 p.education_item_title {
     font-family: 'Libre Bodoni', 'Garamond', serif;
@@ -447,7 +451,8 @@ p.reference_item {
         flex-direction: column;
     }
     .left_header, .right_header, .skills_container, .education_and_experience_container {
-        width: 100%; 
+        width: 100%;
+        box-sizing: border-box;
     }
     .content {
         flex-direction: column;
@@ -527,6 +532,7 @@ p.reference_item {
         justify-content: space-between;
         padding-left: 5vw;
         padding-right: 7vw;
+        box-sizing: border-box;
     }
     .skills_container p.title {
         font-size: 6vw;
