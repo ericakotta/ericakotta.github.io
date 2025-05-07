@@ -210,6 +210,7 @@ body {
     margin: 0 auto;
     display: box;
     box-sizing: border-box;
+    padding-top: 2vw;
 }
 
 .left_header img.icons {
@@ -325,7 +326,7 @@ body {
     text-align: left;
     box-sizing: border-box;
     color: white;
-    background-color: #585858;
+    /* background-color: #585858; */
     margin: 0;
     height: auto;
     display: flex;
